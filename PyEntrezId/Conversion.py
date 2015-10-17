@@ -25,7 +25,7 @@ class Conversion(object):
         server = "http://rest.genenames.org/fetch/hgnc_id/{0}".format(hgnc)
         r = requests.get(server, headers={ "Content-Type" : "application/json"})
         if not r.ok:
-            r.raise_fo_status()
+            r.raise_for_status()
             sys.exit()
         response = r.text
         info = xmltodict.parse(response)
@@ -34,5 +34,23 @@ class Conversion(object):
                 entrezdict[data['@name']] = data['#text']
             if data['@name'] == 'symbol':
                 entrezdict[data['@name']] = data['#text']
-        
         return entrezdict
+
+    def convert_entrez_to_uniprot(self, entrez):
+        '''Convert Entrez Id to Uniprot Id'''
+        server = "http://www.uniprot.org/uniprot/?query=%22GENEID+{0}%22&format=xml".format(entrez)
+        r = requests.get(server, headers={ "Content-Type" : "text/xml"})
+        if not r.ok:
+            r.raise_for_status()
+            sys.exit()
+        response = r.text
+        info = xmltodict.parse(response)
+        try:
+            data = info['uniprot']['entry']['accession'][0]
+            return data
+        except TypeError:
+            data = info['uniprot']['entry'][0]['accession'][0]
+            return data
+
+
+
