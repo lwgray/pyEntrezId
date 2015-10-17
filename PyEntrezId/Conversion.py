@@ -1,10 +1,4 @@
 #!/usr/bin/python
-import httplib2 as http
-import json
-try:
- from urlparse import urlparse
-except ImportError:
- from urllib.parse import urlparse
 import requests, sys, xmltodict
 
 class Conversion(object):
