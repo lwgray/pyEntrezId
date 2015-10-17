@@ -1,4 +1,4 @@
-from distuils.core import setup
+from distutils.core import setup
 setup(
     name = 'PyEntrezId',
     packages = ['PyEntrezId'],
