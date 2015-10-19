@@ -53,4 +53,26 @@ class Conversion(object):
             return data
 
 
-
+    def convert_uniprot_to_entrez(self, uniprot):
+        '''Convert Uniprot Id to Entrez Id'''
+        #Submit request to NCBI eutils/Gene Database
+        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term={0}".format(uniprot)
+        r = requests.get(server, headers={ "Content-Type" : "text/xml"})
+        if not r.ok:
+            r.raise_for_status()
+            sys.exit()
+        # Process Request
+        response = r.text
+        info = xmltodict.parse(response)
+        geneId = info['eSearchResult']['IdList']['Id']
+        # check to see if more than one result is returned
+        # if you have more than more result then check which Entrez Id returns the same uniprot Id entered.
+        if len(geneId) > 1:
+            for x in geneId:
+                c = self.convert_entrez_to_uniprot(x)
+                c = c.lower()
+                u = uniprot.lower()
+                if c==u:
+                    return x
+        else:
+            return geneId

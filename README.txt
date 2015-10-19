@@ -25,8 +25,23 @@ print EntrezID  # Returns a dictionary containing Symbol and Entrez Id
 
 Example Code 3
 ---------------------------------------------------------
+
+from PyEntrezId import Conversion
+
 EntrezID = 39
 Id = Conversion()
 UniProtId = Id.convert_entrez_to_uniprot(EntrezID)
 print UniProtId  # Returns a string
+#########################################################
+
+Example Code 4
+---------------------------------------------------------
+
+from PyEntrezId import Conversion
+
+UniProtId = 'Q9BWD1'
+Id = Conversion()
+EntrezID = Id.convert_uniprot_to_entrez(UniProtId)
+pritn EntrezID # Returns a string
+########################################################
 
