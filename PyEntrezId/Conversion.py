@@ -1,14 +1,27 @@
 #!/usr/bin/python
-import requests, sys, xmltodict
+import requests
+import sys
+import xmltodict
+try:
+    from urllib import urlencode
+except:
+    from urllib.parse import urlencode
+
 
 class Conversion(object):
-    def __init__(self):
-        pass 
+    def __init__(self, email):
+        '''Must Include Email'''
+        self.params = {}
+        self.params['tool']='PyEntrez'
+        self.email = email
+        self.params["email"] = self.email
+        self.options = urlencode(self.params, doseq=True) 
+        return
 
     def convert_ensembl_to_entrez(self, ensembl):
         '''Convert Ensembl Id to Entrez Gene Id'''
         # Submit resquest to NCBI eutils/Gene database
-        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term={0}".format(ensembl)
+        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?" + self.options + "&db=gene&term={0}".format(ensembl)
         r = requests.get(server, headers={ "Content-Type" : "text/xml"})
         if not r.ok:
             r.raise_for_status()
@@ -56,7 +69,7 @@ class Conversion(object):
     def convert_uniprot_to_entrez(self, uniprot):
         '''Convert Uniprot Id to Entrez Id'''
         #Submit request to NCBI eutils/Gene Database
-        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term={0}".format(uniprot)
+        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?" + self.options + "&db=gene&term={0}".format(uniprot)
         r = requests.get(server, headers={ "Content-Type" : "text/xml"})
         if not r.ok:
             r.raise_for_status()
