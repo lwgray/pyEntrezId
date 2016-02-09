@@ -65,7 +65,6 @@ class Conversion(object):
             data = info['uniprot']['entry'][0]['accession'][0]
             return data
 
-
     def convert_uniprot_to_entrez(self, uniprot):
         '''Convert Uniprot Id to Entrez Id'''
         #Submit request to NCBI eutils/Gene Database
@@ -89,3 +88,17 @@ class Conversion(object):
                     return x
         else:
             return geneId
+
+    def convert_accession_to_taxid(self, accessionid):
+        '''Convert Accession Id to Tax Id '''
+        # Submit request to NCBI eutils/Taxonomy Database
+        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?" + self.options + "&db=gene&id={0}&retmode=xml".format(accessionid)
+        r = requests.get(server, headers={ "Content-Type" : "text/xml"})
+        if not r.ok:
+            r.raise_for_status()
+            sys.exit()
+        # Process Request
+        response = r.text
+        records = xmltodict.parse(response)
+        taxid = records['Entrezgene-Set']['Entrezgene']['Entrezgene_source']['BioSource']['BioSource_org']['Org-ref']['Org-ref_db']['Dbtag']['Dbtag_tag']['Object-id']['Object-id_id']
+        return taxid
