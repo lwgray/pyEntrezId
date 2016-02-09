@@ -12,10 +12,10 @@ class Conversion(object):
     def __init__(self, email):
         '''Must Include Email'''
         self.params = {}
-        self.params['tool']='PyEntrez'
+        self.params['tool'] = 'PyEntrez'
         self.email = email
         self.params["email"] = self.email
-        self.options = urlencode(self.params, doseq=True) 
+        self.options = urlencode(self.params, doseq=True)
         return
 
     def convert_ensembl_to_entrez(self, ensembl):
@@ -67,7 +67,7 @@ class Conversion(object):
 
     def convert_uniprot_to_entrez(self, uniprot):
         '''Convert Uniprot Id to Entrez Id'''
-        #Submit request to NCBI eutils/Gene Database
+        # Submit request to NCBI eutils/Gene Database
         server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?" + self.options + "&db=gene&term={0}".format(uniprot)
         r = requests.get(server, headers={ "Content-Type" : "text/xml"})
         if not r.ok:
