@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
     name = 'PyEntrezId',
     packages = ['PyEntrezId'],
-    version = '1.4.6',
+    version = '1.4.7',
     description = 'Converts UniProt, HGNC, and Ensembl Transcript Ids to Entrez Gene Id',
     author = 'Larry Gray',
     author_email = 'lwgray@gmail.com',
