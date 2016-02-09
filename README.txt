@@ -53,3 +53,17 @@ Converts Uniprot Id to Entrez Gene Id ::
     EntrezID = Id.convert_uniprot_to_entrez(UniProtId)
     print EntrezID # Returns a string
 
+
+Example Code 5
+--------------
+Converts Accession Id to Taxonomy Id ::
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    from PyEntrezId import Conversion
+
+    AccessionId = 'Q9BWD1'
+    Id = Conversion('sampleemail@nih.gov') #include your email address
+    TaxID = Id.convert_accesion_to_taxid(AccesionId)
+    print TaxID # Returns a string
+
+
