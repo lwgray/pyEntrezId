@@ -61,7 +61,7 @@ Converts Accession Id to Taxonomy Id ::
 
     from PyEntrezId import Conversion
 
-    AccessionId = 'Q9BWD1'
+    AccessionId = 'AC131209'
     Id = Conversion('sampleemail@nih.gov') #include your email address
     TaxID = Id.convert_accesion_to_taxid(AccesionId)
     print TaxID # Returns a string
