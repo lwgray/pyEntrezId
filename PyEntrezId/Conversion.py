@@ -92,7 +92,7 @@ class Conversion(object):
     def convert_accession_to_taxid(self, accessionid):
         '''Convert Accession Id to Tax Id '''
         # Submit request to NCBI eutils/Taxonomy Database
-        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?" + self.options + "&db=gene&id={0}&retmode=xml".format(accessionid)
+        server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?" + self.options + "&db=nuccore&id={0}&retmode=xml".format(accessionid)
         r = requests.get(server, headers={ "Content-Type" : "text/xml"})
         if not r.ok:
             r.raise_for_status()
@@ -100,5 +100,19 @@ class Conversion(object):
         # Process Request
         response = r.text
         records = xmltodict.parse(response)
-        taxid = records['Entrezgene-Set']['Entrezgene']['Entrezgene_source']['BioSource']['BioSource_org']['Org-ref']['Org-ref_db']['Dbtag']['Dbtag_tag']['Object-id']['Object-id_id']
-        return taxid
+        try:
+            for i in records['GBSet']['GBSeq']['GBSeq_feature-table']['GBFeature']['GBFeature_quals']['GBQualifier']:
+                for key, value in i.iteritems():
+                    if value == 'db_xref':
+                        taxid = i['GBQualifier_value']
+                        taxid = taxid.split(':')[1]
+                        return taxid
+        except:
+            for i in records['GBSet']['GBSeq']['GBSeq_feature-table']['GBFeature'][0]['GBFeature_quals']['GBQualifier']:
+                for key, value in i.iteritems():
+                    if value == 'db_xref':
+                        taxid = i['GBQualifier_value']
+                        taxid = taxid.split(':')[1]
+                        return taxid
+        return
+
