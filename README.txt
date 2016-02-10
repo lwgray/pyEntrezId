@@ -2,6 +2,12 @@
 PyEntrezId
 ==========
 
+Installation
+------------
+Simple Install from Pypi with pip ::
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pip install PyEntrezId
+
 
 Example Code 1
 --------------
