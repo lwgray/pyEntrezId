@@ -1,6 +1,6 @@
-==========
 PyEntrezId
 ==========
+.. image:: https://coveralls.io/repos/github/lwgray/pyEntrezId/badge.svg?branch=master :target: https://coveralls.io/github/lwgray/pyEntrezId?branch=master    
 
 Installation
 ------------
