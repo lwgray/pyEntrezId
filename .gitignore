@@ -1,1 +1,4 @@
 *.pyc
+*.log
+/PyEntrezId/__pycache__
+./logs

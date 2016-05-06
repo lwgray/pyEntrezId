@@ -2,9 +2,10 @@
 import requests
 import sys
 import xmltodict
+import re
 try:
     from urllib import urlencode
-except:
+except ImportError:
     from urllib.parse import urlencode
 
 
@@ -12,9 +13,13 @@ class Conversion(object):
     def __init__(self, email):
         '''Must Include Email'''
         self.params = {}
-        self.params['tool'] = 'PyEntrez'
         self.email = email
-        self.params["email"] = self.email
+        self.params['tool'] = 'PyEntrez'
+        if re.match(r"[^@]+@[^@]+\.[^@]+", self.email):
+            pass
+        else:
+            raise ValueError("Enter a valid Email Address")
+        self.params["email"] = email
         self.options = urlencode(self.params, doseq=True)
         return
 
@@ -115,4 +120,3 @@ class Conversion(object):
                         taxid = taxid.split(':')[1]
                         return taxid
         return
-
