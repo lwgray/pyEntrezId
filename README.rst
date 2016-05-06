@@ -1,8 +1,11 @@
 PyEntrezId
 ==========
-.. image:: https://img.shields.io/pypi/v/nine.svg?maxAge=2592000   :target: https://pypi.python.org/pypi?:action=display&name=pyEntrezId&version=1.4.9
-.. image:: https://coveralls.io/repos/github/lwgray/pyEntrezId/badge.svg?branch=master :target: https://coveralls.io/github/lwgray/pyEntrezId?branch=master    
-
+.. image:: https://img.shields.io/pypi/v/nine.svg?maxAge=2592000   
+   :target: https://pypi.python.org/pypi?:action=display&name=pyEntrezId&version=1.5.0
+.. image:: https://coveralls.io/repos/github/lwgray/pyEntrezId/badge.svg?branch=master
+   :target: https://coveralls.io/github/lwgray/pyEntrezId?branch=master    
+.. image:: https://travis-ci.org/lwgray/pyEntrezId.svg?branch=master
+   :target: https://travis-ci.org/lwgray/pyEntrezId
 Installation
 ------------
 Simple Install from Pypi with pip ::
