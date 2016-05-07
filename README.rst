@@ -1,5 +1,11 @@
 PyEntrezId
 ==========
+.. image:: https://img.shields.io/pypi/v/pyEntrezId.svg
+   :target: https://pypi.python.org/pypi/pyEntrezId
+.. image:: https://img.shields.io/pypi/pyversions/PyEntrezId.svg
+   :target: https://pypi.python.org/pypi/PyEntrezId
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+   :target: https://raw.githubusercontent.com/lwgray/lwgray/pyEntrezId/master/LICENSE.txt
 .. image:: https://img.shields.io/pypi/v/nine.svg?maxAge=2592000   
    :target: https://pypi.python.org/pypi?:action=display&name=pyEntrezId&version=1.5.0
 .. image:: https://coveralls.io/repos/github/lwgray/pyEntrezId/badge.svg?branch=master
@@ -10,7 +16,7 @@ Installation
 ------------
 Simple Install from Pypi with pip ::
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Pip install PyEntrezId
+    pip install PyEntrezId
 
 
 Example Code 1
