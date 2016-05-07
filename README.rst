@@ -5,19 +5,19 @@ PyEntrezId
 .. image:: https://img.shields.io/pypi/pyversions/PyEntrezId.svg
    :target: https://pypi.python.org/pypi/PyEntrezId
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://raw.githubusercontent.com/lwgray/lwgray/pyEntrezId/master/LICENSE.txt
+   :target: https://raw.githubusercontent.com/lwgray/lwgray/pyEntrezId/master/LICENSE
 .. image:: https://img.shields.io/pypi/v/nine.svg?maxAge=2592000   
    :target: https://pypi.python.org/pypi?:action=display&name=pyEntrezId&version=1.5.0
 .. image:: https://coveralls.io/repos/github/lwgray/pyEntrezId/badge.svg?branch=master
    :target: https://coveralls.io/github/lwgray/pyEntrezId?branch=master    
 .. image:: https://travis-ci.org/lwgray/pyEntrezId.svg?branch=master
    :target: https://travis-ci.org/lwgray/pyEntrezId
-Installation
-------------
-Simple Install from Pypi with pip ::
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    pip install PyEntrezId
+Quick Start
+-----------
 
+::
+
+    $ pip install --upgrade pyEntrezId
 
 Example Code 1
 --------------
@@ -82,4 +82,18 @@ Converts Accession Id to Taxonomy Id ::
     TaxID = Id.convert_accesion_to_taxid(AccesionId)
     print TaxID # Returns a string
 
+Contributing
+------------
 
+Contributions to this library are always welcome and highly encouraged.
+
+See 'CONTRIBUTING'_ for more information on how to get started.
+
+.. _CONTRIBUTING: https://github.com/lwgray/PyEntrezId/blob/master/CONTRIBUTING.rst
+
+License
+-------
+
+The MIT License (MIT)
+
+.. _LICENSE: https://github.com/lwgray/PyEntrezID/blob/master/LICENSE
