@@ -20,12 +20,11 @@ Summary
 
 This is the first package I am releasing into the wild. Any feedback would be greatly appreciated!
 
-I created this package because there is a lack of simple developer tools to convert between the numerous IDs used to identify genes, proteins, etc...
+I created this package because there is a lack of a simple developer tool to convert between the numerous IDs used to identify genes, proteins, etc.  This is important because databases hosted by various scientific institutions (NIH, EMBL, etc) sometimes have different nomenclature to describe the same exact thing(gene, protein, dna, rna, etc).
 
-This is important because databases hosted by various scientific institutions (NIH, EMBL, etc) sometimes have different nomenclature to describe the same exact thing(gene, protein, dna, rna, etc).
+There is a need to be able to perform these conversions quickly. Only a few python tools provide a solution to this issue.
 
-There is an need to be able to perform these conversions quickly. Since I last checked, current python tools like biopython lack a complete solution to this issue.
-
+I think this project is unique because it provides open access to the conversion code and has a singular goal.
 
 Quick Start
 -----------
