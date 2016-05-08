@@ -11,7 +11,6 @@ with open(os.path.join(HERE, 'README.rst')) as f:
 REQUIREMENTS = [
     'colorama==0.3.7',
     'nose==1.3.7',
-    'PyEntrezId==1.4.9',
     'python-termstyle==0.1.10',
     'rednose==1.1.1',
     'requests==2.10.0',
@@ -21,7 +20,7 @@ REQUIREMENTS = [
 setup(
     name='PyEntrezId',
     packages=['PyEntrezId'],
-    version='1.5.1',
+    version='1.5.2',
     description='Converts UniProt, HGNC, and Ensembl Transcript Ids to \
         Entrez Gene Id. Also, converts accession number to Taxonomy id',
     author='Larry Gray',
@@ -29,7 +28,7 @@ setup(
     long_description=README,
     scripts=[],
     url='https://github.com/lwgray/pyEntrezId',
-    download_url='https://github.com/lwgray/pyEntrezId/tarball/1.5.1',
+    download_url='https://github.com/lwgray/pyEntrezId/tarball/1.5.2',
     keywords=['Ensembl', 'Entrez', 'Gene', 'HGNC', 'UniProt', 'Taxid',
               'Accession', 'Taxonomy', 'Accesion Number', 'NCBI', 'NLM',
               'DNA', 'Convert', 'Genomics', 'Biology'],
