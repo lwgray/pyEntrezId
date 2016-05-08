@@ -21,7 +21,7 @@ REQUIREMENTS = [
 setup(
     name='PyEntrezId',
     packages=['PyEntrezId'],
-    version='1.5.4',
+    version='1.5.5',
     description='Converts UniProt, HGNC, and Ensembl Transcript Ids to \
         Entrez Gene Id. Also, converts accession number to Taxonomy id',
     author='Larry Gray',
@@ -29,7 +29,7 @@ setup(
     long_description=README,
     scripts=[],
     url='https://github.com/lwgray/pyEntrezId',
-    download_url='https://github.com/lwgray/pyEntrezId/tarball/1.5.4',
+    download_url='https://github.com/lwgray/pyEntrezId/tarball/1.5.5',
     keywords=['Ensembl', 'Entrez', 'Gene', 'HGNC', 'UniProt', 'Taxid',
               'Accession', 'Taxonomy', 'Accesion Number', 'NCBI', 'NLM',
               'DNA', 'Convert', 'Genomics', 'Biology'],
@@ -46,6 +46,8 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python',
+        'Intended Audience :: Science/Research',
+        'Topic :: Utilities',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
     ]
 )

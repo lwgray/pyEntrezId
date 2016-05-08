@@ -2,3 +2,4 @@
 *.log
 /PyEntrezId/__pycache__
 ./logs
+./dist
