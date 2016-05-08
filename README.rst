@@ -1,17 +1,19 @@
 PyEntrezId
 ==========
+
+    Python package to convert between various gene or protein IDs
+
+.. image:: https://travis-ci.org/lwgray/pyEntrezId.svg?branch=master
+   :target: https://travis-ci.org/lwgray/pyEntrezId
+.. image:: https://coveralls.io/repos/github/lwgray/pyEntrezId/badge.svg?branch=master
+   :target: https://coveralls.io/github/lwgray/pyEntrezId?branch=master    
 .. image:: https://img.shields.io/pypi/v/pyEntrezId.svg
    :target: https://pypi.python.org/pypi/pyEntrezId
 .. image:: https://img.shields.io/pypi/pyversions/PyEntrezId.svg
    :target: https://pypi.python.org/pypi/PyEntrezId
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://raw.githubusercontent.com/lwgray/lwgray/pyEntrezId/master/LICENSE
-.. image:: https://img.shields.io/pypi/v/nine.svg?maxAge=2592000   
-   :target: https://pypi.python.org/pypi?:action=display&name=pyEntrezId&version=1.5.0
-.. image:: https://coveralls.io/repos/github/lwgray/pyEntrezId/badge.svg?branch=master
-   :target: https://coveralls.io/github/lwgray/pyEntrezId?branch=master    
-.. image:: https://travis-ci.org/lwgray/pyEntrezId.svg?branch=master
-   :target: https://travis-ci.org/lwgray/pyEntrezId
+
 Quick Start
 -----------
 
@@ -19,10 +21,11 @@ Quick Start
 
     $ pip install --upgrade pyEntrezId
 
-Example Code 1
---------------
-Converts Ensemble Transcript Gene Id to Entrez Gene Id ::
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Examples
+--------
+
+Convert Ensemble Transcript Gene Id to Entrez Gene Id ::
+--------------------------------------------------------
     from PyEntrezId import Conversion
 
     EnsemblId = 'ENST00000407559'
@@ -31,24 +34,22 @@ Converts Ensemble Transcript Gene Id to Entrez Gene Id ::
     print(EntrezId)  # Returns a String
 
 
-Example Code 2
---------------
-Converts HGNC ID to Entrez Gene Id ::
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Convert HGNC ID to Entrez Gene Id ::
+------------------------------------
 
+.. code:: python
     from PyEntrezId import Conversion
 
-    HGNCID = 9245  # hgncid ca be just the number or 'HGNC:9425'
-    Id = Conversion('sampleemail@nih.gov') #include your email address
+    HGNCID = 9245  # HGNCID can be just the number or 'HGNC:9425'
+    Id = Conversion('sampleemail@nih.gov') # include your email address
     EntrezId = Id.convert_hgnc_to_entrez(HGNCID)
     print EntrezID  # Returns a dictionary containing Symbol and Entrez Id
 
 
-Example Code 3
---------------
-Converts Entrez Gene Id to Uniprot ID ::
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Convert Entrez Gene Id to Uniprot ID ::
+---------------------------------------
 
+.. code:: python
     from PyEntrezId import Conversion
 
     EntrezID = 39
@@ -57,11 +58,10 @@ Converts Entrez Gene Id to Uniprot ID ::
     print UniProtId  # Returns a string
 
 
-Example Code 4
---------------
-Converts Uniprot Id to Entrez Gene Id ::
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Convert Uniprot Id to Entrez Gene Id ::
+---------------------------------------
 
+.. code:: python
     from PyEntrezId import Conversion
 
     UniProtId = 'Q9BWD1'
@@ -70,11 +70,10 @@ Converts Uniprot Id to Entrez Gene Id ::
     print EntrezID # Returns a string
 
 
-Example Code 5
---------------
-Converts Accession Id to Taxonomy Id ::
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Convert Accession Id to Taxonomy Id ::
+--------------------------------------
 
+.. code:: python
     from PyEntrezId import Conversion
 
     AccessionId = 'AC131209'

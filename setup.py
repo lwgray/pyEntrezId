@@ -1,29 +1,51 @@
+'''Setup file'''
+import os
 from distutils.core import setup
+
+HERE = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(HERE, 'README.rst')) as f:
+    README = f.read()
+
+
+REQUIREMENTS = [
+    'colorama==0.3.7',
+    'nose==1.3.7',
+    'PyEntrezId==1.4.9',
+    'python-termstyle==0.1.10',
+    'rednose==1.1.1',
+    'requests==2.10.0',
+    'xmltodict==0.10.1',
+    ]
+
 setup(
-    name = 'PyEntrezId',
-    packages = ['PyEntrezId'],
-    version = '1.5.0',
-    description = 'Converts UniProt, HGNC, and Ensembl Transcript Ids to Entrez Gene Id. Also, converts accession number to Taxonomy id',
-    author = 'Larry Gray',
-    author_email = 'lwgray@gmail.com',
-    url = 'https://github.com/lwgray/pyEntrezId',
-    download_url = 'https://github.com/lwgray/pyEntrezId/tarball/1.5.0',
-    keywords = ['Ensembl', 'Entrez', 'Gene', 'HGNC', 'UniProt', 'Taxid', 'Accession', 'Taxonomy', 'Accesion Number', 'NCBI', 'NLM', 'DNA'],
+    name='PyEntrezId',
+    packages=['PyEntrezId'],
+    version='1.5.1',
+    description='Converts UniProt, HGNC, and Ensembl Transcript Ids to \
+        Entrez Gene Id. Also, converts accession number to Taxonomy id',
+    author='Larry Gray',
+    author_email='lwgray@gmail.com',
+    long_description=README,
+    scripts=[],
+    url='https://github.com/lwgray/pyEntrezId',
+    download_url='https://github.com/lwgray/pyEntrezId/tarball/1.5.1',
+    keywords=['Ensembl', 'Entrez', 'Gene', 'HGNC', 'UniProt', 'Taxid',
+              'Accession', 'Taxonomy', 'Accesion Number', 'NCBI', 'NLM',
+              'DNA', 'Convert', 'Genomics', 'Biology'],
+    install_requires=REQUIREMENTS,
     classifiers=[
-          'Development Status :: 4 - Beta',
-          'Environment :: Console',
-          'Environment :: Web Environment',
-          'Intended Audience :: Developerd',
-          'License :: The MIT License',
-          'Operating System :: OS Independent',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 2.6',
-          'Programming Language :: Python :: 2.7',
-          'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.4',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python',
-          'Topic :: BioInformatics :: Tools',
-          ],
-    install_requires = ['xmltodict>=0.9.2', 'requests>=2.8.1'],
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'Operating System :: OS Independent',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python',
+        'Topic :: Scientific/Engineering :: Bio-Informatics',
+    ]
 )
