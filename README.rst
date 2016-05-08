@@ -14,6 +14,19 @@ PyEntrezId
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://raw.githubusercontent.com/lwgray/lwgray/pyEntrezId/master/LICENSE
 
+
+Summary
+-------
+
+This is the first package I am releasing into the wild. Any feedback would be greatly appreciated!
+
+I created this package because there is a lack of simple developer tools to convert between the numerous IDs used to identify genes, proteins, etc...
+
+This is important because databases hosted by various scientific institutions (NIH, EMBL, etc) sometimes have different nomenclature to describe the same exact thing(gene, protein, dna, rna, etc).
+
+There is an need to be able to perform these conversions quickly. Since I last checked, current python tools like biopython lack a complete solution to this issue.
+
+
 Quick Start
 -----------
 
@@ -42,7 +55,6 @@ Convert HGNC ID to Entrez Gene Id
 ::
 
     from PyEntrezId import Conversion
-
     HGNCID = 9245  # HGNCID can be just the number or 'HGNC:9425'
     Id = Conversion('sampleemail@nih.gov') # include your email address
     EntrezId = Id.convert_hgnc_to_entrez(HGNCID)
@@ -53,6 +65,7 @@ Convert Entrez Gene Id to Uniprot ID
 ------------------------------------
 
 ::
+    
     from PyEntrezId import Conversion
     EntrezID = 39
     Id = Conversion('sampleemail@nih.gov') #include your email address
