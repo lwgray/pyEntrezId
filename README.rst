@@ -24,8 +24,10 @@ Quick Start
 Examples
 --------
 
-Convert Ensemble Transcript Gene Id to Entrez Gene Id ::
---------------------------------------------------------
+Convert Ensemble Transcript Gene Id to Entrez Gene Id
+-----------------------------------------------------
+
+.. code:: python
     from PyEntrezId import Conversion
 
     EnsemblId = 'ENST00000407559'
@@ -34,8 +36,8 @@ Convert Ensemble Transcript Gene Id to Entrez Gene Id ::
     print(EntrezId)  # Returns a String
 
 
-Convert HGNC ID to Entrez Gene Id ::
-------------------------------------
+Convert HGNC ID to Entrez Gene Id
+---------------------------------
 
 .. code:: python
     from PyEntrezId import Conversion
@@ -46,8 +48,8 @@ Convert HGNC ID to Entrez Gene Id ::
     print EntrezID  # Returns a dictionary containing Symbol and Entrez Id
 
 
-Convert Entrez Gene Id to Uniprot ID ::
----------------------------------------
+Convert Entrez Gene Id to Uniprot ID
+------------------------------------
 
 .. code:: python
     from PyEntrezId import Conversion
@@ -58,8 +60,8 @@ Convert Entrez Gene Id to Uniprot ID ::
     print UniProtId  # Returns a string
 
 
-Convert Uniprot Id to Entrez Gene Id ::
----------------------------------------
+Convert Uniprot Id to Entrez Gene Id
+------------------------------------
 
 .. code:: python
     from PyEntrezId import Conversion
@@ -70,8 +72,8 @@ Convert Uniprot Id to Entrez Gene Id ::
     print EntrezID # Returns a string
 
 
-Convert Accession Id to Taxonomy Id ::
---------------------------------------
+Convert Accession Id to Taxonomy Id
+-----------------------------------
 
 .. code:: python
     from PyEntrezId import Conversion
