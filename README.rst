@@ -41,11 +41,12 @@ Convert Ensemble Transcript Gene Id to Entrez Gene Id
 
     from PyEntrezId import Conversion
     
-    
     EnsemblId = 'ENST00000407559'
-    Id = Conversion('sampleemail@nih.gov') #include your email address
+    # include your email address
+    Id = Conversion('dummyemail@dummybunny.info')
     EntrezId = Id.convert_ensembl_to_entrez(EnsemblId)
-    print(EntrezId)  # Returns a String
+    # Returns a string 
+    print(EntrezId)
 
 
 Convert HGNC ID to Entrez Gene Id
@@ -55,11 +56,13 @@ Convert HGNC ID to Entrez Gene Id
 
     from PyEntrezId import Conversion
     
-    
-    HGNCID = 9245  # HGNCID can be just the number or 'HGNC:9425'
-    Id = Conversion('sampleemail@nih.gov') # include your email address
+    # HGNCID can be just the number or 'HGNC:9425'
+    HGNCID = 9245
+    # include your email address
+    Id = Conversion('dummyemail@dummybunny.info')
     EntrezId = Id.convert_hgnc_to_entrez(HGNCID)
-    print EntrezID  # Returns a dictionary containing Symbol and Entrez Id
+    # Returns a dictionary containing Symbol and Entrez Id
+    print EntrezID
 
 
 Convert Entrez Gene Id to Uniprot ID
@@ -69,11 +72,12 @@ Convert Entrez Gene Id to Uniprot ID
 
     from PyEntrezId import Conversion
     
-    
     EntrezID = 39
-    Id = Conversion('sampleemail@nih.gov') #include your email address
+    # include your email address
+    Id = Conversion('dummyemail@dummybunny.info')
     UniProtId = Id.convert_entrez_to_uniprot(EntrezID)
-    print UniProtId  # Returns a string
+    # Returns a string
+    print UniProtId
 
 
 Convert Uniprot Id to Entrez Gene Id
@@ -83,11 +87,12 @@ Convert Uniprot Id to Entrez Gene Id
 
     from PyEntrezId import Conversion
     
-    
     UniProtId = 'Q9BWD1'
-    Id = Conversion('sampleemail@nih.gov') #include your email address
+    # include your email address
+    Id = Conversion('dummyemail@dummybunny.info')
     EntrezID = Id.convert_uniprot_to_entrez(UniProtId)
-    print EntrezID # Returns a string
+    # Returns a string
+    print EntrezID
 
 
 Convert Accession Id to Taxonomy Id
@@ -97,11 +102,12 @@ Convert Accession Id to Taxonomy Id
 
     from PyEntrezId import Conversion
     
-    
     AccessionId = 'AC131209'
-    Id = Conversion('sampleemail@nih.gov') #include your email address
+    # include your email address
+    Id = Conversion('dummyemail@dummybunny.info')
     TaxID = Id.convert_accesion_to_taxid(AccesionId)
-    print TaxID # Returns a string
+    # Returns a string
+    print TaxID
 
 Contributing
 ------------
