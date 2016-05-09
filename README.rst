@@ -40,6 +40,8 @@ Convert Ensemble Transcript Gene Id to Entrez Gene Id
 .. code:: python
 
     from PyEntrezId import Conversion
+    
+    
     EnsemblId = 'ENST00000407559'
     Id = Conversion('sampleemail@nih.gov') #include your email address
     EntrezId = Id.convert_ensembl_to_entrez(EnsemblId)
@@ -52,6 +54,8 @@ Convert HGNC ID to Entrez Gene Id
 .. code:: python
 
     from PyEntrezId import Conversion
+    
+    
     HGNCID = 9245  # HGNCID can be just the number or 'HGNC:9425'
     Id = Conversion('sampleemail@nih.gov') # include your email address
     EntrezId = Id.convert_hgnc_to_entrez(HGNCID)
@@ -64,6 +68,8 @@ Convert Entrez Gene Id to Uniprot ID
 .. code:: python
 
     from PyEntrezId import Conversion
+    
+    
     EntrezID = 39
     Id = Conversion('sampleemail@nih.gov') #include your email address
     UniProtId = Id.convert_entrez_to_uniprot(EntrezID)
@@ -76,6 +82,8 @@ Convert Uniprot Id to Entrez Gene Id
 .. code:: python
 
     from PyEntrezId import Conversion
+    
+    
     UniProtId = 'Q9BWD1'
     Id = Conversion('sampleemail@nih.gov') #include your email address
     EntrezID = Id.convert_uniprot_to_entrez(UniProtId)
@@ -88,6 +96,8 @@ Convert Accession Id to Taxonomy Id
 .. code:: python
 
     from PyEntrezId import Conversion
+    
+    
     AccessionId = 'AC131209'
     Id = Conversion('sampleemail@nih.gov') #include your email address
     TaxID = Id.convert_accesion_to_taxid(AccesionId)
