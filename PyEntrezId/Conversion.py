@@ -25,16 +25,23 @@ class Conversion(object):
 
     def convert_ensembl_to_entrez(self, ensembl):
         '''Convert Ensembl Id to Entrez Gene Id'''
+        if 'ENST' in ensembl:
+                pass
+        else:
+            raise(IndexError)
         # Submit resquest to NCBI eutils/Gene database
         server = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?" + self.options + "&db=gene&term={0}".format(ensembl)
-        r = requests.get(server, headers={ "Content-Type" : "text/xml"})
+        r = requests.get(server, headers={"Content-Type": "text/xml"})
         if not r.ok:
             r.raise_for_status()
             sys.exit()
         # Process Request
         response = r.text
         info = xmltodict.parse(response)
-        geneId = info['eSearchResult']['IdList']['Id']
+        try:
+            geneId = info['eSearchResult']['IdList']['Id']
+        except TypeError:
+            raise(TypeError)
         return geneId
 
     def convert_hgnc_to_entrez(self, hgnc):
