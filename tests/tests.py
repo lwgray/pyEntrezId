@@ -3,7 +3,8 @@ from PyEntrezId.Conversion import Conversion
 
 
 ENSEMBL_ID = 'ENST00000407559'
-FAKE_ENSEMBL_ID = 'ENTT11000'
+FAKE_ENSEMBL_ID_ONE = 'ENTT11000'
+FAKE_ENSEMBL_ID_TWO = 'ENST11000'
 EMAIL = 'pyentrez@nowherebutup.info'
 FAKE_EMAIL = 'pyentrez.info'
 
@@ -35,12 +36,18 @@ class TddinConversion(unittest.TestCase):
         ''' Test email address syntax '''
         self.assertRaises(ValueError, Conversion, FAKE_EMAIL)
 
-    def test_ensembl_to_entrez_return(self):
-        entrezid = Config.BIO_ID.convert_ensembl_to_entrez(ENSEMBL_ID)
-        self.assertEqual(entrezid, u'55112')
-
-    def test_ensembl_to_entrez_param(self):
+    def test_ensembl_to_entrez(self):
+        ''' Test Emseml to Entrez Function '''
+        # Output of Ensembl to Entrez returns Correct Value
+        self.assertEqual(
+            Config.BIO_ID.convert_ensembl_to_entrez(ENSEMBL_ID), u'55112')
+        # Test malformed Ensembl ID without 'ENST' Tag in ID
         self.assertRaises(
             IndexError,
             Config.BIO_ID.convert_ensembl_to_entrez,
-            FAKE_ENSEMBL_ID)
+            FAKE_ENSEMBL_ID_ONE)
+        # Test malformed Ensembl ID with 'ENST' but remaining seq is incorrect
+        self.assertRaises(
+            TypeError,
+            Config.BIO_ID.convert_ensembl_to_entrez,
+            FAKE_ENSEMBL_ID_TWO)
