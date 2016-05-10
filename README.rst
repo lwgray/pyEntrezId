@@ -26,7 +26,7 @@ I think this project is unique because it provides open access to the conversion
 
 Links to Discussion
 -------------------
-`Reddit <https://www.reddit.com/r/bioinformatics/comments/4icres/new_bioinformatics_python_package_to_easily/`_.
+Reddit: <https://www.reddit.com/r/bioinformatics/comments/4icres/new_bioinformatics_python_package_to_easily/>
 
 
 Quick Start
