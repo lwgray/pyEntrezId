@@ -19,10 +19,10 @@ Summary
 -------
 
 This is the first package I am releasing into the wild. Any feedback would be greatly appreciated!
+I hope this project can be used as an example for beginners on how to structure/code a simple bioinformatics tool.
 
-I created this package because there is a lack of a simple developer tool to convert between the numerous IDs used to identify genes, proteins, etc.  This is important because databases hosted by various scientific institutions (NIH, EMBL, etc) sometimes have different nomenclature to describe the same exact thing(gene, protein, dna, rna, etc).
-
-I think this project is unique because it provides open access to the conversion code and has the singular goal of converting IDs.
+I created this package because I needed a simple tool to convert between the multitude of IDs used to identify genes, proteins, etc...  
+This is important because databases hosted by various scientific institutions (NIH, EMBL, etc) sometimes have different nomenclature to describe the same exact thing(gene, protein, dna, rna, etc).
 
 Links to Discussion
 -------------------
