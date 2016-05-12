@@ -9,10 +9,6 @@ PyEntrezId
    :target: https://coveralls.io/github/lwgray/pyEntrezId?branch=master    
 .. image:: https://img.shields.io/pypi/v/pyEntrezId.svg
    :target: https://pypi.python.org/pypi/pyEntrezId
-.. image:: https://img.shields.io/pypi/pyversions/PyEntrezId.svg
-   :target: https://pypi.python.org/pypi/PyEntrezId
-.. image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://raw.githubusercontent.com/lwgray/lwgray/pyEntrezId/master/LICENSE
 
 
 Summary
