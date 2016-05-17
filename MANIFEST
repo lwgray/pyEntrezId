@@ -3,3 +3,4 @@ setup.cfg
 setup.py
 PyEntrezId/Conversion.py
 PyEntrezId/__init__.py
+PyEntrezId/decorators.py
