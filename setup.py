@@ -1,4 +1,4 @@
-'''Setup file'''
+"""Setup file"""
 # import os
 from distutils.core import setup
 
