@@ -132,7 +132,7 @@ class Conversion(object):
                         return taxid
         return
 
-    def convert_symbol_to_enterzid(self, symbol):
+    def convert_symbol_to_entrezid(self, symbol):
         """Convert Symbol to Entrez Gene Id"""
         entrezdict = {}
         server = "http://rest.genenames.org/fetch/symbol/{0}".format(symbol)

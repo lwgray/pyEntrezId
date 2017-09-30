@@ -110,6 +110,24 @@ Convert Accession Id to Taxonomy Id
     # Returns a string
     print TaxID
 
+
+Convert Gene Symbol to Entrez Gene Id
+---------------------------------
+
+.. code:: python
+
+    from PyEntrezId import Conversion
+    
+    # HGNCID can be just the number or 'HGNC:9425'
+    Symbol = 'CDK2'
+    # include your email address
+    Id = Conversion('dummyemail@dummybunny.info')
+    EntrezId = Id.convert_symbol_to_entrezid(Symbol)
+    # Returns a dictionary containing Symbol and Entrez Id
+    print EntrezID
+
+
+
 Contributing
 ------------
 
