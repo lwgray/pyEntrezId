@@ -1,11 +1,11 @@
-'''Setup file'''
-import os
+"""Setup file"""
+# import os
 from distutils.core import setup
 
-HERE = os.path.abspath(os.path.dirname(__file__))
+# HERE = os.path.abspath(os.path.dirname(__file__))
 
-with open(os.path.join(HERE, 'README.rst')) as f:
-    README = f.read()
+# with open(os.path.join(HERE, 'README.rst')) as f:
+#     README = f.read()
 
 
 REQUIREMENTS = [
@@ -21,15 +21,14 @@ REQUIREMENTS = [
 setup(
     name='PyEntrezId',
     packages=['PyEntrezId'],
-    version='1.5.7',
+    version='1.5.8.2',
     description='Converts UniProt, HGNC, and Ensembl Transcript Ids to \
         Entrez Gene Id. Also, converts accession number to Taxonomy id',
     author='Larry Gray',
     author_email='lwgray@gmail.com',
-    long_description=README,
     scripts=[],
     url='https://github.com/lwgray/pyEntrezId',
-    download_url='https://github.com/lwgray/pyEntrezId/tarball/1.5.7',
+    download_url='https://github.com/lwgray/pyEntrezId/tarball/1.5.8.2',
     keywords=['Ensembl', 'Entrez', 'Gene', 'HGNC', 'UniProt', 'Taxid',
               'Accession', 'Taxonomy', 'Accesion Number', 'NCBI', 'NLM',
               'DNA', 'Convert', 'Genomics', 'Biology'],
@@ -39,12 +38,7 @@ setup(
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python',
         'Intended Audience :: Science/Research',
         'Topic :: Utilities',
