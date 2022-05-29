@@ -3,3 +3,4 @@
 /PyEntrezId/__pycache__
 ./logs
 ./dist
+PyEntrezId.egg-info/

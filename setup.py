@@ -11,10 +11,10 @@ from distutils.core import setup
 REQUIREMENTS = [
     'colorama==0.3.7',
     'nose==1.3.7',
-    'Pygments==2.1.3',
+    'Pygments==2.7.4',
     'python-termstyle==0.1.10',
     'rednose==1.1.1',
-    'requests==2.10.0',
+    'requests==2.20.0',
     'xmltodict==0.10.1',
     ]
 
