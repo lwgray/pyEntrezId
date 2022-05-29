@@ -94,7 +94,7 @@ class Conversion(object):
         geneId = info['eSearchResult']['IdList']['Id']
         # check to see if more than one result is returned
         # if you have more than more result then check which Entrez Id returns the same uniprot Id entered.
-        if len(geneId) > 1:
+        if isinstance(geneId, list) and len(geneId) > 1:
             for x in geneId:
                 c = self.convert_entrez_to_uniprot(x)
                 c = c.lower()
